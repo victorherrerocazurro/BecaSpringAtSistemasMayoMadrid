@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Singleton. Una instancia unica -->
+	<bean id="PersonaSingleton" class="com.atsistemas.Persona"></bean>
+	
+	<!-- Prototype. Tantas instancias como invoaciones a getBean de este objeto -->
+	<bean id="PersonaPrototype" class="com.atsistemas.Persona" scope="prototype"></bean>
+	
+	<bean class="com.atsistemas.Negocio">
+		<constructor-arg name="persistencia" ref="persistenciaHibernate"/>
+	</bean>
+	
+	<bean id="persistenciaHibernate" class="com.atsistemas.persistencia.HibernatePersistencia"></bean>
+
+</beans>

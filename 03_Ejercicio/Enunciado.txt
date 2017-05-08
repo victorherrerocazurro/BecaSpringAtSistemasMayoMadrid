@@ -1,0 +1,4 @@
+-Proyecto con capas: Presentacion, Servicio, Negocio y Persistencia.
+-ID a las capas.
+-Cada capa sea un jar distinto.
+-CRUD Alta, baja, Modificacion y busquedaPorId de una Factura.
