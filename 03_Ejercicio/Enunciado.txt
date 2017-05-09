@@ -1,4 +1,9 @@
--Proyecto con capas: Presentacion, Servicio, Negocio y Persistencia.
+-Proyecto con capas: 
+
+	-Presentacion: Pintar info y permitir la interacion del usuario con la app
+	-Servicio: Expone las funcionalidades que conforman los requisitos
+	-Negocio: Todos los algoritmos
+	-Persistencia: Interaccion con entornos de almacenamiento de datos
 -ID a las capas.
 -Cada capa sea un jar distinto.
 -CRUD Alta, baja, Modificacion y busquedaPorId de una Factura.
