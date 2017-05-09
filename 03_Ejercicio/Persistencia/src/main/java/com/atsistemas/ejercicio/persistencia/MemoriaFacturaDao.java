@@ -19,18 +19,16 @@ public class MemoriaFacturaDao implements FacturaDao {
 	}
 
 	public void update(Factura factura) {
-		// TODO Auto-generated method stub
+		tablaFacturas.put(factura.getId(), factura);
 
 	}
 
 	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-
+		tablaFacturas.remove(id);
 	}
 
 	public Factura selectById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return tablaFacturas.get(id);
 	}
 
 }

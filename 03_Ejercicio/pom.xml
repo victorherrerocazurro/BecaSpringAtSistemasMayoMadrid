@@ -9,6 +9,9 @@
   	<module>Interfaces</module>
   	<module>Servicio</module>
   	<module>Persistencia</module>
+  	<module>Negocio</module>
+  	<module>Presentacion</module>
+  	<module>Aplicacion</module>
   </modules>
   <build>
 		<plugins>

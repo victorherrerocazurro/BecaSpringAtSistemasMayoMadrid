@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="tablaFacturas" class="java.util.HashMap"/>
+	
+	<bean id="facturaDao" class="com.atsistemas.ejercicio.persistencia.MemoriaFacturaDao">
+		<constructor-arg name="tablaFacturas" ref="tablaFacturas"/>
+	</bean>
+	
+	<bean id="negocio" class="com.atsistemas.ejercicio.negocio.NegocioImpl">
+		<constructor-arg name="facturaDao" ref="facturaDao"/>
+	</bean>
+	
+	<bean id="servicio" class="com.atsistemas.ejercicio.servicio.ServicioImpl">
+		<constructor-arg name="facturaDao" ref="facturaDao"/>
+		<constructor-arg name="negocio" ref="negocio"/>
+	</bean>
+	
+	<bean id="controlador" class="com.atsistemas.ejercicio.controlador.Controlador">
+		<constructor-arg name="servicio" ref="servicio"/>
+	</bean>
+	
+
+</beans>

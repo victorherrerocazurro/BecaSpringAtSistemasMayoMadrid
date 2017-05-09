@@ -22,7 +22,8 @@ public class ServicioImpl implements Servicio {
 	public void altaFactura(Factura factura) {
 		try {
 			facturaDao.save(factura);
-			negocio.enviarCorreoElectronico();
+			//Incidencia 1 - Cambio de la interface del Negocio
+			negocio.enviarCorreoElectronico(factura.getId());
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
