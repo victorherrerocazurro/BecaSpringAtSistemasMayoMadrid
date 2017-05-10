@@ -6,7 +6,7 @@
 		<artifactId>03_Ejercicio</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Presentacion</artifactId>
+	<artifactId>PersistenciaJDBC</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.atsistemas</groupId>
