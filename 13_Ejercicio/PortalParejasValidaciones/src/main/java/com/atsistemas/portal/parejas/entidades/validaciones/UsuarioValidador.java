@@ -12,6 +12,7 @@ import com.atsistemas.portal.parejas.entidades.Usuario;
 public class UsuarioValidador {
 
 	@Around("execution(void com.atsistemas.portal.parejas.servicios.BasicServicio.registroUsuario(com.atsistemas.portal.parejas.entidades.Usuario)) && args(usuario)")
+	//@Around("execution(void *.*.registroUsuario(..)) && args(usuario)")
 	public void isEdadValido(ProceedingJoinPoint joinPoint, Usuario usuario){
 		System.out.println("En el aspecto antes de ejecutar el target");
 		if(usuario.getEdad() >= 18){
