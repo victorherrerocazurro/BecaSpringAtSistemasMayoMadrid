@@ -40,7 +40,7 @@ public class Controlador {
 		
 		if(!errores.hasErrors()){
 			//invoco el servicio
-			errores.getFieldErrors("id")
+			
 		}
 		
 		model.addAttribute("", new Object());
